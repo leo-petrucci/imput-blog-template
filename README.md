@@ -1,4 +1,4 @@
-# Portfolio Blog Starter with Imput
+# Portfolio Blog Starter with Imput CMS
 
 This is a porfolio site template complete with a blog. Includes:
 
@@ -26,6 +26,21 @@ Clone it.
 
 ```sh
 git clone git@github.com:leo-petrucci/imput-blog-template.git
+```
+
+Change Imput's [`repo` config](<https://github.com/leo-petrucci/imput-blog-template/blob/main/app/(imput)/admin/%5B%5B...cms%5D%5D/page.tsx#L18>).
+
+```diff
+backend: {
+    name: "github",
+-    repo: "leo-petrucci/imput-blog-template",
++    repo: "<your username>/<the repo name you created when forking>",
+    branch: "main",
+    base_url: "http://localhost:3000/",
+    auth_endpoint: "api/authorize",
+},
+media_folder: "public/uploads",
+public_folder: "/uploads",
 ```
 
 Generate your [Github id and secret](https://www.imput.computer/docs/quick-start/choosing-your-backend#getting-your-oauth-secrets).
