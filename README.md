@@ -49,11 +49,7 @@ Install it.
 
 ```sh
 pnpm install
-```
-
-or
-
-```sh
+# or
 npm install
 ```
 
@@ -61,11 +57,7 @@ Run it.
 
 ```sh
 pnpm dev
-```
-
-or
-
-```sh
+# or
 npm run dev
 ```
 
