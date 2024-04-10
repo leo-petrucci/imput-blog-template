@@ -1,9 +1,10 @@
 "use client";
 
-import { BlockType } from "imput-cms";
 import dynamic from "next/dynamic";
-import "../../../(site)/global.css";
 import "imput-cms/dist/index.css";
+import "../../../(site)/global.css";
+import { components } from "app/(site)/components/mdx";
+import lodash from "lodash/omit";
 
 const NextCMS = dynamic(() => import("imput-cms"), {
   ssr: false,
@@ -29,7 +30,7 @@ const CMS = () => (
           {
             name: "blog",
             label: "Blog",
-            folder: "app/blog/posts",
+            folder: "app/(site)/blog/posts",
             create: true,
             slug: "{{name}}",
             extension: "mdx",
@@ -61,7 +62,27 @@ const CMS = () => (
               },
               { label: "Content", name: "body", widget: "markdown" },
             ],
-            blocks: [],
+            preview: {
+              components,
+              wrapper: ({ children }) => (
+                <div className="prose">{children}</div>
+              ),
+            },
+            blocks: [
+              {
+                name: "Table",
+                label: "Table",
+                fields: [
+                  {
+                    label: "Data",
+                    name: "data",
+                    type: {
+                      widget: "json",
+                    },
+                  },
+                ],
+              },
+            ],
           },
         ],
       },
