@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 import "imput-cms/dist/index.css";
 import "../../../(site)/global.css";
 import { components } from "app/(site)/components/mdx";
-import lodash from "lodash/omit";
 
 const NextCMS = dynamic(() => import("imput-cms"), {
   ssr: false,
@@ -18,10 +17,7 @@ const CMS = () => (
           name: "github",
           repo: "leo-petrucci/imput-blog-template",
           branch: "main",
-          base_url:
-            process.env.NODE_ENV === "production"
-              ? "https://www.imput.computer"
-              : "http://localhost:3000/",
+          base_url: "http://localhost:3000/",
           auth_endpoint: "api/authorize",
         },
         media_folder: "public/uploads",

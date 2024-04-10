@@ -1,8 +1,9 @@
-# Portfolio Blog Starter
+# Portfolio Blog Starter with Imput
 
 This is a porfolio site template complete with a blog. Includes:
 
 - MDX and Markdown support
+- Imput: a git-based CMS
 - Optimized for SEO (sitemap, robots, JSON-LD schema)
 - RSS Feed
 - Dynamic OG images
@@ -11,32 +12,63 @@ This is a porfolio site template complete with a blog. Includes:
 - Vercel Speed Insights / Web Analytics
 - Geist font
 
+This repo is a fork of [Leerob's Portfolio blog starter](https://github.com/vercel/examples/tree/main/solutions/blog) with the addition of [`imput-cms`](https://www.imput.computer/) as an admin interface.
+
 ## Demo
 
 https://portfolio-blog-starter.vercel.app
 
 ## How to Use
 
-You can choose from one of the following two methods to use this repository:
+Fork the repo on Github with [this link](https://github.com/leo-petrucci/imput-blog-template/fork)
 
-### One-Click Deploy
+Clone it.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
-
-### Clone and Deploy
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
-
-```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
+```sh
+git clone git@github.com:leo-petrucci/imput-blog-template.git
 ```
 
-Then, run Next.js in development mode:
+Generate your [Github id and secret](https://www.imput.computer/docs/quick-start/choosing-your-backend#getting-your-oauth-secrets).
 
-```bash
+Install it.
+
+```sh
+pnpm install
+```
+
+or
+
+```sh
+npm install
+```
+
+Run it.
+
+```sh
 pnpm dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
+or
+
+```sh
+npm run dev
+```
+
+## How to deploy it
+
+To use this in production you'll have to change the [`baseUrl` config](<https://github.com/leo-petrucci/imput-blog-template/blob/main/app/(imput)/admin/%5B%5B...cms%5D%5D/page.tsx#L20>) to the domain you plan to use in production.
+
+```diff
+backend: {
+    name: "github",
+    repo: "leo-petrucci/imput-blog-template",
+    branch: "main",
+-   base_url: "http://localhost:3000/",
++   base_url: "<your domain>",
+    auth_endpoint: "api/authorize",
+},
+media_folder: "public/uploads",
+public_folder: "/uploads",
+```
+
+You'll also have to generate a new [Github id and secret](https://www.imput.computer/docs/quick-start/choosing-your-backend#getting-your-oauth-secrets) for prod.

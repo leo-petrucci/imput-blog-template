@@ -18,8 +18,8 @@ dependencies:
     specifier: 1.2.2
     version: 1.2.2(next@14.1.4)
   imput-cms:
-    specifier: latest
-    version: 0.5.11(@types/react@18.2.21)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^0.5.12
+    version: 0.5.12(@types/react@18.2.21)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
@@ -1700,8 +1700,8 @@ packages:
     resolution: {integrity: sha512-bc4NBHqOqSfRW7POMkHd51LvClaeMXpm8dx0e8oE2GORbq5aRK7Bxl4FyzVLdGtLmvLKL7BTDBG5ACQm4HWjTA==}
     dev: false
 
-  /imput-cms@0.5.11(@types/react@18.2.21)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-zy46kLm1JHgj9yO+aZnxmjdAeMw1AEm5PI5toBD94WQcV4+N5yeW8FQXRxtvZzI1wc/f0VnyjuqkTIGEHrcGNw==}
+  /imput-cms@0.5.12(@types/react@18.2.21)(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-0eYtsslENplF4hcADlakd23kilCZQQdJ6krxMcfn7hvUlp5xlPpvJHfGsK7hSOSXNhhyuknEXpQbswNwKEZAzw==}
     peerDependencies:
       '@types/react': 18.x
       react: 18.x
