@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic";
 import "imput-cms/dist/index.css";
-import "../../../(site)/global.css";
 import { components } from "app/(site)/components/mdx";
 
 const NextCMS = dynamic(() => import("imput-cms"), {
@@ -59,6 +58,7 @@ const CMS = () => (
               { label: "Content", name: "body", widget: "markdown" },
             ],
             preview: {
+              styles: ["/css/global.css"],
               components,
               wrapper: ({ children }) => (
                 <div className="prose">{children}</div>
