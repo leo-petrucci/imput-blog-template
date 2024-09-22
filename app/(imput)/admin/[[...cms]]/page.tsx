@@ -16,7 +16,7 @@ const CMS = () => (
           name: "github",
           repo: "leo-petrucci/imput-blog-template",
           branch: "main",
-          base_url: "http://localhost:3000/",
+          base_url: "https://imput-blog-template.vercel.app",
           auth_endpoint: "api/authorize",
         },
         media_folder: "public/uploads",
