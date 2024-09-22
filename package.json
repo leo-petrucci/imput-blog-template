@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "pnpm styles && next dev",
-    "build": "next build",
+    "build": "pnpm styles && next build",
     "start": "next start",
     "styles": "pnpm dlx tailwindcss -i './app/(site)/global.css' -o ./public/css/global.css --minify",
     "postinstall": "pnpm up imput-cms@latest"
